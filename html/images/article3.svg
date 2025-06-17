@@ -1,0 +1,22 @@
+<svg width="400" height="200" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="200" fill="#f0f7ff" />
+  
+  <!-- Decorative elements -->
+  <rect x="50" y="50" width="300" height="100" rx="10" fill="#3385ff" opacity="0.7" />
+  
+  <!-- Group messaging icon -->
+  <circle cx="160" cy="90" r="20" fill="white" />
+  <circle cx="200" cy="90" r="20" fill="white" />
+  <circle cx="240" cy="90" r="20" fill="white" />
+  
+  <!-- Connection lines -->
+  <line x1="180" y1="90" x2="200" y2="90" stroke="white" stroke-width="2" />
+  <line x1="220" y1="90" x2="240" y2="90" stroke="white" stroke-width="2" />
+  
+  <!-- Message bubble -->
+  <rect x="180" y="120" width="40" height="20" rx="5" fill="white" />
+  
+  <!-- Text label -->
+  <text x="200" y="160" font-family="Arial, sans-serif" font-weight="bold" font-size="16" fill="#333" text-anchor="middle">Group Messaging Technology</text>
+</svg>

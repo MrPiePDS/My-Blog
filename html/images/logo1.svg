@@ -1,0 +1,10 @@
+<svg width="120" height="40" viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background shape -->
+  <rect x="5" y="8" width="30" height="24" rx="12" fill="#0066cc" />
+  
+  <!-- Message bubble icon -->
+  <path d="M15 20c0-1.1.9-2 2-2h6c1.1 0 2 .9 2 2v4c0 1.1-.9 2-2 2h-2l-2 2-2-2h-2c-1.1 0-2-.9-2-2v-4z" fill="white" />
+  
+  <!-- Text -->
+  <text x="40" y="25" font-family="Arial, sans-serif" font-weight="bold" font-size="16" fill="#333">Snappy</text>
+</svg>

@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Features - Snappy Messaging</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .feature-card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--card-shadow-hover);
+        }
+        
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background-color: var(--bg-color-alt);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 32px;
+            color: var(--accent-color);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        
+        .feature-card h3 {
+            margin-bottom: 15px;
+            color: var(--heading-color);
+            transition: color 0.3s ease;
+        }
+        
+        .feature-card p {
+            color: var(--text-color);
+            transition: color 0.3s ease;
+            margin-bottom: 20px;
+        }
+        
+        .feature-detail {
+            margin-top: 60px;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            padding: 40px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .feature-detail:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        
+        .feature-detail-content {
+            flex: 1;
+        }
+        
+        .feature-detail-image {
+            flex: 1;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-detail-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .feature-detail h2 {
+            margin-bottom: 20px;
+            color: #111;
+        }
+        
+        .feature-detail p {
+            margin-bottom: 20px;
+            color: #444;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        
+        .feature-detail ul {
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+        
+        .feature-detail ul li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 20px;
+            list-style-type: none;
+        }
+        
+        .feature-detail ul li:before {
+            content: "✓";
+            color: var(--accent-color);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        
+        @media (max-width: 992px) {
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .feature-detail {
+                flex-direction: column;
+                gap: 30px;
+            }
+            
+            .feature-detail:nth-child(even) {
+                flex-direction: column;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="logo">
+                <img src="../images/logo.svg" alt="Snappy Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Apps</a></li>
+                <li><a href="features.html" class="active">Features</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-right">
+                <button class="btn-login">Log in</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Snappy Features</h1>
+                <p class="subtitle">Discover all the powerful features that make Snappy the perfect messaging solution</p>
+            </div>
+        </section>
+
+        <section class="content">
+            <div class="container">
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🔒</div>
+                        <h3>End-to-End Encryption</h3>
+                        <p>Your messages are secured with state-of-the-art encryption, ensuring only you and your recipient can read them.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">👥</div>
+                        <h3>Group Messaging</h3>
+                        <p>Create groups with up to 1000 members for seamless communication with friends, family, or colleagues.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">📱</div>
+                        <h3>Cross-Platform</h3>
+                        <p>Use Snappy on all your devices - mobile, tablet, desktop - with perfect synchronization.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">🎥</div>
+                        <h3>Video Calls</h3>
+                        <p>Crystal clear video calls with up to 8 participants, perfect for virtual meetings or catching up.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">☁️</div>
+                        <h3>Cloud Backup</h3>
+                        <p>Never lose your conversations with automatic cloud backup and easy restoration.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">🌐</div>
+                        <h3>Web Version</h3>
+                        <p>Access Snappy directly from your browser without installing anything.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-details">
+                    <div class="feature-detail">
+                        <div class="feature-detail-content">
+                            <h2>Advanced Privacy & Security</h2>
+                            <p>At Snappy, we believe your conversations should be as private as face-to-face interactions. Our advanced security features ensure your messages stay between you and your intended recipients.</p>
+                            <ul>
+                                <li>End-to-end encryption for all messages and calls</li>
+                                <li>Two-factor authentication for account protection</li>
+                                <li>Disappearing messages with customizable timers</li>
+                                <li>Screen security to prevent screenshots</li>
+                                <li>Biometric lock for additional app security</li>
+                            </ul>
+                        </div>
+                        <div class="feature-detail-image">
+                            <svg width="500" height="300" viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="500" height="300" fill="#f0f7ff" />
+                                <rect x="100" y="50" width="300" height="200" rx="10" fill="#0066cc" opacity="0.1" />
+                                
+                                <!-- Phone outline -->
+                                <rect x="175" y="25" width="150" height="250" rx="20" fill="white" stroke="#333" stroke-width="3" />
+                                
+                                <!-- Screen -->
+                                <rect x="185" y="45" width="130" height="210" rx="5" fill="#f5f5f5" />
+                                
+                                <!-- Lock icon -->
+                                <circle cx="250" cy="125" r="40" fill="#0066cc" opacity="0.8" />
+                                <rect x="235" y="115" width="30" height="40" rx="5" fill="white" />
+                                <rect x="230" y="115" width="40" height="20" rx="5" fill="white" />
+                                
+                                <!-- Message bubbles -->
+                                <rect x="195" y="185" width="50" height="25" rx="10" fill="#e1e1e1" />
+                                <rect x="255" y="185" width="50" height="25" rx="10" fill="#0066cc" opacity="0.8" />
+                                
+                                <!-- Lock symbols on messages -->
+                                <circle cx="215" cy="197.5" r="5" fill="#555" />
+                                <circle cx="275" cy="197.5" r="5" fill="white" />
+                            </svg>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-detail">
+                        <div class="feature-detail-content">
+                            <h2>Rich Media Sharing</h2>
+                            <p>Share your moments and important files with ease. Snappy supports all types of media with high-quality preservation and fast delivery.</p>
+                            <ul>
+                                <li>High-resolution photo sharing without compression</li>
+                                <li>4K video sharing with preview thumbnails</li>
+                                <li>Document sharing for all file types up to 2GB</li>
+                                <li>Voice messages with waveform visualization</li>
+                                <li>Live location sharing with real-time updates</li>
+                            </ul>
+                        </div>
+                        <div class="feature-detail-image">
+                            <svg width="500" height="300" viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="500" height="300" fill="#f0f7ff" />
+                                
+                                <!-- Media grid background -->
+                                <rect x="100" y="50" width="300" height="200" rx="10" fill="#0066cc" opacity="0.1" />
+                                
+                                <!-- Media items -->
+                                <rect x="120" y="70" width="80" height="80" rx="5" fill="#4d94ff" />
+                                <rect x="210" y="70" width="80" height="80" rx="5" fill="#3385ff" />
+                                <rect x="300" y="70" width="80" height="80" rx="5" fill="#1a75ff" />
+                                
+                                <rect x="120" y="160" width="80" height="80" rx="5" fill="#0066ff" />
+                                <rect x="210" y="160" width="80" height="80" rx="5" fill="#0052cc" />
+                                <rect x="300" y="160" width="80" height="80" rx="5" fill="#003d99" />
+                                
+                                <!-- Media icons -->
+                                <circle cx="160" cy="110" r="15" fill="white" />
+                                <polygon points="150,105 150,115 165,110" fill="#333" />
+                                
+                                <rect x="245" y="100" width="10" height="20" fill="white" />
+                                <rect x="235" y="110" width="30" height="10" fill="white" />
+                                
+                                <circle cx="340" cy="110" r="15" fill="white" />
+                                <circle cx="340" cy="110" r="10" fill="#333" />
+                                <circle cx="340" cy="110" r="5" fill="white" />
+                                
+                                <path d="M160,180 L140,200 L180,200 Z" fill="white" />
+                                <circle cx="170" cy="175" r="5" fill="white" />
+                                
+                                <rect x="225" y="175" width="30" height="20" rx="2" fill="white" />
+                                <rect x="230" y="180" width="20" height="2" fill="#333" />
+                                <rect x="230" y="185" width="20" height="2" fill="#333" />
+                                <rect x="230" y="190" width="15" height="2" fill="#333" />
+                                
+                                <circle cx="340" cy="200" r="15" fill="white" />
+                                <path d="M330,200 L340,185 L350,200" fill="#333" />
+                            </svg>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-detail">
+                        <div class="feature-detail-content">
+                            <h2>Seamless Group Collaboration</h2>
+                            <p>Snappy makes group communication efficient and organized, whether you're planning a family event or managing a work project.</p>
+                            <ul>
+                                <li>Create groups with up to 1000 members</li>
+                                <li>Advanced admin controls and member permissions</li>
+                                <li>Pinned messages for important information</li>
+                                <li>Polls and voting for quick decision making</li>
+                                <li>Shared calendars and event planning</li>
+                            </ul>
+                        </div>
+                        <div class="feature-detail-image">
+                            <svg width="500" height="300" viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="500" height="300" fill="#f0f7ff" />
+                                
+                                <!-- Group chat background -->
+                                <rect x="100" y="50" width="300" height="200" rx="10" fill="#0066cc" opacity="0.1" />
+                                
+                                <!-- User avatars -->
+                                <circle cx="150" cy="100" r="25" fill="#4d94ff" />
+                                <circle cx="200" cy="100" r="25" fill="#3385ff" />
+                                <circle cx="250" cy="100" r="25" fill="#1a75ff" />
+                                <circle cx="300" cy="100" r="25" fill="#0066ff" />
+                                <circle cx="350" cy="100" r="25" fill="#0052cc" />
+                                
+                                <!-- User silhouettes -->
+                                <circle cx="150" cy="90" r="10" fill="white" />
+                                <rect x="135" y="105" width="30" height="15" rx="7.5" fill="white" />
+                                
+                                <circle cx="200" cy="90" r="10" fill="white" />
+                                <rect x="185" y="105" width="30" height="15" rx="7.5" fill="white" />
+                                
+                                <circle cx="250" cy="90" r="10" fill="white" />
+                                <rect x="235" y="105" width="30" height="15" rx="7.5" fill="white" />
+                                
+                                <circle cx="300" cy="90" r="10" fill="white" />
+                                <rect x="285" y="105" width="30" height="15" rx="7.5" fill="white" />
+                                
+                                <circle cx="350" cy="90" r="10" fill="white" />
+                                <rect x="335" y="105" width="30" height="15" rx="7.5" fill="white" />
+                                
+                                <!-- Message bubbles -->
+                                <rect x="150" y="150" width="200" height="30" rx="15" fill="#e1e1e1" />
+                                <rect x="150" y="190" width="200" height="30" rx="15" fill="#0066cc" opacity="0.8" />
+                                
+                                <!-- Message text lines -->
+                                <rect x="170" y="160" width="160" height="2" fill="#555" />
+                                <rect x="170" y="165" width="120" height="2" fill="#555" />
+                                
+                                <rect x="170" y="200" width="160" height="2" fill="white" />
+                                <rect x="170" y="205" width="120" height="2" fill="white" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="container">
+                <h2>Ready to experience the speed and simplicity of Snappy?</h2>
+                <a href="#" class="btn-download">Download Now</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-logo">
+                <img src="../images/logo.svg" alt="Snappy Logo">
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>About us</h4>
+                    <ul>
+                        <li><a href="#">Our Story</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Our Product</h4>
+                    <ul>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="#">Security</a></li>
+                        <li><a href="#">Mobile</a></li>
+                        <li><a href="#">Desktop</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Terms</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Download</h4>
+                    <div class="app-buttons">
+                        <a href="#" class="app-button">App Store</a>
+                        <a href="#" class="app-button">Google Play</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2023 Snappy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
