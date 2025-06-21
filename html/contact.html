@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Snappy Messaging</title>
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/animations.css">
     <style>
         .contact-form {
             max-width: 600px;
@@ -15,11 +17,11 @@
             box-shadow: var(--card-shadow);
             transition: background-color 0.3s ease, box-shadow 0.3s ease;
         }
-        
+
         .form-group {
             margin-bottom: 20px;
         }
-        
+
         label {
             display: block;
             margin-bottom: 8px;
@@ -27,8 +29,10 @@
             color: var(--text-color);
             transition: color 0.3s ease;
         }
-        
-        input, textarea, select {
+
+        input,
+        textarea,
+        select {
             width: 100%;
             padding: 12px;
             border: 1px solid var(--border-color);
@@ -39,12 +43,12 @@
             color: var(--text-color);
             transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
         }
-        
+
         textarea {
             min-height: 150px;
             resize: vertical;
         }
-        
+
         button {
             background-color: var(--accent-color);
             color: var(--bg-color-light);
@@ -57,18 +61,18 @@
             cursor: pointer;
             transition: background-color 0.3s ease;
         }
-        
+
         button:hover {
             background-color: var(--accent-color-hover);
         }
-        
+
         .contact-info {
             margin-top: 60px;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 30px;
         }
-        
+
         .contact-card {
             text-align: center;
             padding: 30px;
@@ -77,12 +81,12 @@
             transition: transform 0.3s ease, background-color 0.3s ease;
             box-shadow: var(--card-shadow);
         }
-        
+
         .contact-card:hover {
             transform: translateY(-5px);
             box-shadow: var(--card-shadow-hover);
         }
-        
+
         .contact-icon {
             width: 60px;
             height: 60px;
@@ -96,7 +100,7 @@
             font-size: 24px;
             transition: background-color 0.3s ease, color 0.3s ease;
         }
-        
+
         @media (max-width: 768px) {
             .contact-info {
                 grid-template-columns: 1fr;
@@ -104,6 +108,7 @@
         }
     </style>
 </head>
+
 <body>
     <header>
         <nav class="main-nav">
@@ -127,7 +132,8 @@
         <section class="hero">
             <div class="container">
                 <h1>Contact Us</h1>
-                <p class="subtitle">We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+                <p class="subtitle">We'd love to hear from you. Send us a message and we'll respond as soon as possible.
+                </p>
             </div>
         </section>
 
@@ -139,12 +145,12 @@
                             <label for="name">Your Name</label>
                             <input type="text" id="name" name="name" required>
                         </div>
-                        
+
                         <div class="form-group">
                             <label for="email">Email Address</label>
                             <input type="email" id="email" name="email" required>
                         </div>
-                        
+
                         <div class="form-group">
                             <label for="subject">Subject</label>
                             <select id="subject" name="subject">
@@ -154,16 +160,16 @@
                                 <option value="partnership">Partnership Opportunity</option>
                             </select>
                         </div>
-                        
+
                         <div class="form-group">
                             <label for="message">Your Message</label>
                             <textarea id="message" name="message" required></textarea>
                         </div>
-                        
+
                         <button type="submit">Send Message</button>
                     </form>
                 </div>
-                
+
                 <div class="contact-info">
                     <div class="contact-card">
                         <div class="contact-icon">📧</div>
@@ -171,14 +177,14 @@
                         <p>support@snappy.com</p>
                         <p>For general inquiries and support</p>
                     </div>
-                    
+
                     <div class="contact-card">
                         <div class="contact-icon">📱</div>
                         <h3>Call Us</h3>
                         <p>+1 (555) 123-4567</p>
                         <p>Monday to Friday, 9am - 5pm</p>
                     </div>
-                    
+
                     <div class="contact-card">
                         <div class="contact-icon">🌎</div>
                         <h3>Visit Us</h3>
@@ -245,31 +251,32 @@
         </div>
     </footer>
 
-    <script>
+    <script defer>
         // Simple form validation and submission handling
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
             e.preventDefault();
-            
+
             // Get form values
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             const subject = document.getElementById('subject').value;
             const message = document.getElementById('message').value;
-            
+
             // Simple validation
             if (!name || !email || !message) {
                 alert('Please fill in all required fields.');
                 return;
             }
-            
+
             // In a real application, you would send this data to a server
             // For this demo, we'll just show a success message
             alert(`Thank you, ${name}! Your message has been sent. We'll get back to you soon.`);
-            
+
             // Reset the form
             this.reset();
         });
     </script>
-    <script src="../js/main.js"></script>
+    <script defer src="../js/main.js"></script>
 </body>
+
 </html>
